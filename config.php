@@ -2,27 +2,39 @@
 
 class config
 {
-    public $config = array
+    public $configArray = array
     (
-        'header' => '\html\header\header.html',
-         'content' => array
+        'header' => '/header/header.html',
+        'content' => array
          (
-            'advert_bottom' => '\html\content\advert_bottom',
-            'advert_top' => '\html\content\advert_top',
-            'left_column' => '\html\content\left_column',
-            'menu' => '\html\content\menu',// this can be an array if nesting applies
+            'menu' => '/content/menu.html',// this can be an array if nesting applies
+
+            'advert_top' => '/content/advert_top.html',
+
+            'left_column' => '/content/left_column.html',
+
             'right_column' => array
             (
-                'default' => '\html\content\right_column',
-                'advert_right' => '\html\content\advert_right',
-            )
+                'default' => '/content/right_column.html',
+                'advert_right' => '/content/advert_right.html',
+            ),
+
+            'advert_bottom' => '/content/advert_bottom.html',
          ),
-        'footer' => '\html\footer\footer.html'
+        'footer' => '/footer/footer.html'
     );
 
     function __construct()
     {
 
+    }
+
+    /**
+     * @return array
+     */
+    public function getConfigArray()
+    {
+        return $this->configArray;
     }
 
 

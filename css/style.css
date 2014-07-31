@@ -1,0 +1,19 @@
+.left_column
+{
+    float:left;
+    width: 50%;
+    background: aqua;
+}
+
+.right_column
+{
+    float:right;
+    width: 50%;
+    background: antiquewhite;
+}
+
+.advert_bottom
+{
+    clear: both;
+    background: brown;
+}
